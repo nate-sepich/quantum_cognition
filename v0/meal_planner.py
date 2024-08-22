@@ -247,7 +247,7 @@ if __name__ == '__main__':
     # Example usage
     iService = inventory_manager.InventoryService('inventory.json')
     inventory = iService.load_inventory()  # Load your inventory here
-    markdown_file = r'C:\Users\sepic\Documents\BeatTheBooks\8.11\recipes\raw_generated_recipes.txt_20240811_201216.md'
+    markdown_file = r'recipes\raw_generated_recipes.txt_20240811_201216.md'
     api_key = os.getenv('API_KEY')
     
     meal_planner = MealPlanner(inventory, markdown_file, api_key)
