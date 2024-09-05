@@ -30,29 +30,3 @@ class InventoryItem(BaseModel):
     quantity: Optional[int]
     upc: Optional[str] = None
     macros: Optional[InventoryItemMacros]
-
-
-class RecipeMacros(BaseModel):
-    total_protein: Optional[float] = 0
-    total_carbohydrates: Optional[float] = 0
-    total_fat: Optional[float] = 0
-
-class Recipe(BaseModel):
-    name: str
-    ingredients: List[InventoryItem]
-    instructions: str
-    macros: Optional[RecipeMacros]
-
-class MealPlanMacros(BaseModel):
-    total_protein: Optional[float] = 0
-    total_carbohydrates: Optional[float] = 0
-    total_fat: Optional[float] = 0
-
-class MealPlan(BaseModel):
-    day: int
-    recipes: List[Recipe]
-    macros: Optional[MealPlanMacros]
-
-
-class GroceryList(BaseModel):
-    items: List[InventoryItem]
