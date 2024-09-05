@@ -2,26 +2,9 @@ from fastapi import FastAPI
 from pydantic import BaseModel
 from typing import List, Optional
 import json
+from models import InventoryItem
 
 app = FastAPI()
-
-class InventoryItemMacros(BaseModel):
-    protein: Optional[float] = 0
-    carbohydrates: Optional[float] = 0
-    fiber: Optional[float] = 0
-    sugar: Optional[float] = 0
-    fat: Optional[float] = 0
-    saturated_fat: Optional[float] = 0
-    polyunsaturated_fat: Optional[float] = 0
-    monounsaturated_fat: Optional[float] = 0
-    trans_fat: Optional[float] = 0
-    cholesterol: Optional[float] = 0
-    sodium: Optional[float] = 0
-    potassium: Optional[float] = 0
-    vitamin_a: Optional[float] = 0
-    vitamin_c: Optional[float] = 0
-    calcium: Optional[float] = 0
-    iron: Optional[float] = 0
 
 # Simulated backend database stored in a JSON file
 DATABASE_FILE = "database.json"
@@ -35,38 +18,40 @@ def write_items(items):
     with open(DATABASE_FILE, "w") as file:
         json.dump(items, file)
 
-@app.get("/items")
+@app.get("/items", response_model=List[InventoryItem])
 def get_items():
     items = read_items()
     return items
 
-@app.get("/items/{item_id}")
-def get_item(item_id: int):
+@app.get("/items/{item_id}", response_model=InventoryItem)
+def get_item(item_id: str):
     items = read_items()
     for item in items:
         if item["id"] == item_id:
             return item
     return {"error": "Item not found"}
 
-@app.post("/items")
-def create_item(item: InventoryItemMacros):
+@app.post("/items", response_model=InventoryItem)
+def create_item(item: InventoryItem):
     items = read_items()
-    items.append(item.dict())
+    item_dict = item.dict()
+    items.append(item_dict)
     write_items(items)
     return item
 
-@app.put("/items/{item_id}")
-def update_item(item_id: int, item: InventoryItemMacros):
+@app.put("/items/{item_id}", response_model=InventoryItem)
+def update_item(item_id: str, item: InventoryItem):
     items = read_items()
     for i, existing_item in enumerate(items):
         if existing_item["id"] == item_id:
             items[i] = item.dict()
+            items[i]["id"] = item_id  # Ensure the ID remains the same
             write_items(items)
             return item
     return {"error": "Item not found"}
 
 @app.delete("/items/{item_id}")
-def delete_item(item_id: int):
+def delete_item(item_id: str):
     items = read_items()
     for i, item in enumerate(items):
         if item["id"] == item_id:
@@ -74,4 +59,3 @@ def delete_item(item_id: int):
             write_items(items)
             return {"message": "Item deleted"}
     return {"error": "Item not found"}
-
