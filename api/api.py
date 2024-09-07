@@ -15,8 +15,8 @@ app.add_middleware(
 )
 
 # Add your routers to the main app
-app.include_router(pantry_router, prefix="/pantry", tags=["Pantry"])
-app.include_router(macro_router, prefix="/macros", tags=["Macros"])
+app.include_router(pantry_router, tags=["Pantry"])
+app.include_router(macro_router, tags=["Macros"])
 
 if __name__ == "__main__":
     import uvicorn
