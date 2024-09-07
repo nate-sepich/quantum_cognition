@@ -1,15 +1,20 @@
-To run the Flask app using Uvicorn, you can use the following command:
-
+# pantry api
+To run the FastAPI app using Uvicorn, you can use the following command:
 ```bash
-uvicorn pantry.api:app
+cd pantry
+```
+```bash
+uvicorn api:app --reload
 ```
 
 This assumes that your `api.py` file is located in the `pantry` folder and that your Flask app object is named `app`.
 
-To run the Flask app using the `flask run` command, you can use the following command:
-
+# pantry flask ui
 ```bash
-FLASK_APP=Flask/main.py flask run
+cd Flask
+```
+```bash
+python main.py
 ```
 
 This assumes that your `main.py` file is located in the `Flask` folder.
