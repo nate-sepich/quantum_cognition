@@ -42,7 +42,7 @@ This is a FastAPI application for managing pantry inventory items.
 1. **Start the FastAPI server:**
 
     ```sh
-    uvicorn main:app --reload
+    uvicorn api:app --reload
     ```
 
     This will start the server on `http://127.0.0.1:8000`.
