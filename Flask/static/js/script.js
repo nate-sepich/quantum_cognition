@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
               row.innerHTML = `
                   <td>${item.product_name}</td>
                   <td>${item.quantity}</td>
+                  <td>${JSON.stringify(item.macros)}</td>
                   <td>
                       <button onclick="editItem('${item.id}')">Edit</button>
                       <button onclick="deleteItem('${item.id}')">Delete</button>
