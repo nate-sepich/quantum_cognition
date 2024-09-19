@@ -1,7 +1,7 @@
 # pantry api
 To run the FastAPI app using Uvicorn, you can use the following command:
 ```bash
-cd pantry
+cd api
 ```
 ```bash
 uvicorn api:app --reload
