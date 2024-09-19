@@ -29,7 +29,7 @@ async def search_food_item_async(item_name: str) -> Optional[int]:
     }
     async with httpx.AsyncClient() as client:
         response = await client.get(search_url, params=params)
-    
+        print(response)
         if response.status_code == 200:
             search_data = response.json()
             if search_data['foods']:
