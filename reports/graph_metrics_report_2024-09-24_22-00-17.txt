@@ -1,0 +1,76 @@
+
+=== Graph Health Score ===
+Node Duplication Score: 89.29
+Isolated Node Score: 64.29
+Relationship Density Score: 60.00
+Relationship Coverage Score: 46.67
+Redundant Relationship Score: 100.00
+Node Creation Time Difference Score: 100.00
+Overall Graph Score: 78.85/100
+
+=== Neo4j Graph Metrics Report ===
+Generated on: 2024-09-24 22:00:17.393756
+
+--- Node Metrics ---
+Node Duplication Rate: 6 duplicate nodes
+Isolated Nodes: 20 nodes with no relationships
+Node Creation Time Difference (Relative): 0.0 days average time difference
+
+--- Relationship Metrics ---
+Average Relationship Density: 3 relationships per node
+Relationship Coverage: 7 distinct relationship types
+Redundant Relationships: 0 redundant relationships found
+
+--- Node Type Distribution ---
+('ProgrammingLanguage',): 5 nodes
+('TextProcessingCapability',): 1 nodes
+('FunctionalProgrammingAspect',): 1 nodes
+('Performance',): 1 nodes
+('ObjectOrientedPrinciple',): 1 nodes
+('Syntax',): 1 nodes
+('SemanticChoice',): 1 nodes
+('Philosophy',): 1 nodes
+('Readability',): 1 nodes
+('EaseOfUse',): 1 nodes
+('FeatureSelection',): 1 nodes
+('Adaptation',): 1 nodes
+('Simplification',): 1 nodes
+('TradeOffs',): 1 nodes
+('FeatureIntegration',): 1 nodes
+('Expressiveness',): 1 nodes
+('DesignChoices',): 1 nodes
+('Semantics',): 1 nodes
+('UnderlyingPhilosophy',): 1 nodes
+('SuccessfulIntegration',): 1 nodes
+('CompetingNeeds',): 1 nodes
+('BalancingTradeOffs',): 1 nodes
+('PythonsDistinctiveIdentity',): 1 nodes
+('SimplificationAndAdaptation',): 1 nodes
+('DesignPhilosophy',): 1 nodes
+('SemanticChoices',): 1 nodes
+('Tension',): 1 nodes
+('FeatureAdoption',): 1 nodes
+('SimplifyingAndAdaptingFeatures',): 1 nodes
+('CorePhilosophy',): 1 nodes
+('ReadabilityAndEaseOfUse',): 1 nodes
+('OverallExpressiveness',): 1 nodes
+('OverallPerformance',): 1 nodes
+('OverallReadability',): 1 nodes
+('ExpressivenessPerformanceAndReadability',): 1 nodes
+('SimplicityAndEaseOfUse',): 1 nodes
+('FeatureAdaptation',): 1 nodes
+('AdaptationAndSimplification',): 1 nodes
+('PythonsUniqueIdentity',): 1 nodes
+('UserFriendliness',): 1 nodes
+('PowerfulTextProcessing',): 1 nodes
+('FunctionalProgramming',): 1 nodes
+('ObjectOrientedPrinciples',): 1 nodes
+('PythonsDesignPhilosophy',): 1 nodes
+('Indentation',): 1 nodes
+('CurlyBraces',): 1 nodes
+('ABC',): 1 nodes
+('C__',): 1 nodes
+('FunctionalProgrammingConcepts',): 1 nodes
+('Lisp',): 1 nodes
+('Tradeoffs',): 1 nodes
+('TextProcessingCapabilities',): 1 nodes
