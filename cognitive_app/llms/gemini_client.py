@@ -17,7 +17,7 @@ genai.configure(api_key=api_key)
 def generate_response_from_model(user_input: str, context: str) -> str:
     try:
         # Initialize the model
-        model = genai.GenerativeModel('gemini-1.5-flash')
+        model = genai.GenerativeModel('gemini-1.5-flash-002')
 
         # Construct the prompt within this function
         # Construct the prompt

@@ -1,0 +1,40 @@
+version: '3.8'
+
+services:
+  ollama:
+    build:
+      context: .
+      dockerfile: self-hosting/ollama/dockerfile
+    ports:
+      - "11434:11434"
+    volumes:
+      - ./models/:/home/models/data
+    networks:
+      - btb-network
+    environment:
+      - QC_OLLAMA_MODEL=mistral
+      - QC_OLLAMA_MODEL_PATH=/home/models/data/mistral
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: 1  # Limit access to one GPU
+              capabilities: [gpu]  # Specify that the container needs GPU access
+  neo4j:
+    image: neo4j:4.4
+    container_name: neo4j
+    ports:
+      - 7474:7474  # HTTP port
+      - 7687:7687  # Bolt port
+    environment:
+      - NEO4J_AUTH=neo4j/your_secure_password
+    volumes:
+      - neo4j_data:/data
+
+networks:
+  btb-network:
+    driver: bridge
+
+volumes:
+  neo4j_data:

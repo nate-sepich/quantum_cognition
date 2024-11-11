@@ -1,9 +1,10 @@
 # main.py
-
+## RECALL
 from neo4j import GraphDatabase
 import os
 from dotenv import load_dotenv
-from llm_client import extract_entities_and_relationships_from_model
+from llms.ollama_client import extract_entities_and_relationships_from_model
+# from llms.nim_client import extract_entities_and_relationships_from_model
 from utils import get_context_from_graph, process_llm_response
 
 # Load environment variables

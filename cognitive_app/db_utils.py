@@ -1,3 +1,4 @@
+# db_utils.py
 from neo4j import GraphDatabase
 from typing import Any, Dict
 from models import NodeModel, RelationshipModel
@@ -128,3 +129,7 @@ def create_relationship(tx, rel_data: RelationshipModel):
         to_node=rel_data.to_node,
         properties=rel_data.properties
     )
+
+def prune_node(tx, node_name):
+    query = "MATCH (n {name: $node_name}) DETACH DELETE n"
+    tx.run(query, node_name=node_name)
