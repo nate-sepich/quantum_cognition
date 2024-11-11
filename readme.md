@@ -2,24 +2,13 @@
 
 This project explores the intersection of quantum computing and cognitive science. It leverages Neo4j for graph database management and integrates with language models to extract and process entities and relationships.
 
+## Project Overview
 
-## Local Setup
-### Tools
- - Docker
- - Ollama
+The Quantum Cognition project aims to combine quantum computing principles with cognitive science to create advanced cognitive assistants. The system uses Neo4j for graph database management and integrates with language models to extract and process entities and relationships.
 
-### Prerequisites
-Before running the demo, you need to set up the required services using Docker Compose. Follow these steps:
+### Why?
 
-- Install Docker and if you haven't already.
-- Navigate to the project directory.
-
-Run the following command to start the services:
-
-```bash
-docker-compose up -d
-```
-This will start the Neo4j and Ollama services defined in the docker-compose.yml file.
+Understanding the complex relationships and entities in cognitive science can be challenging. This project aims to leverage quantum computing and graph databases to provide deeper insights and more efficient processing of cognitive data.
 
 ## Primary Demos
 
@@ -88,3 +77,37 @@ the ENIAC (Electronic Numerical Integrator And Computer) by John Mauchly and J P
 ![Graph Output](docs/demo2/graph.png)
 
 [Detailed Graph Analysis](reports/graph_metrics_report_2024-11-10_21-51-53.txt)
+
+
+### Getting Started
+To get started, you can quickly start all the services using Docker Compose from the root directory:
+
+#### Steps to Run the Project
+Clone the Repository:
+```bash
+git clone https://github.com/nate-sepich/quantum_cognition.git
+```
+
+Set Up Your Environment:
+```bash
+cd quantum_cognition
+docker compose up --build
+```
+
+Make sure to set up your environment variables in a .env file with the following keys:
+- NEO4J_URI
+- NEO4J_USER
+- NEO4J_PASSWORD
+- Replace your_secure_password with your actual Neo4j password.
+- Build and Start All Services Using Docker Compose:
+
+Verify That All Services Are Up and Running:
+```bash
+docker ps
+```
+Make sure that all the service containers (Neo4j, Ollama) are running and healthy.
+
+Run one of the Primary Demos from above.
+
+## Open Source Tools
+1. **Ollama**: [Website](https://ollama.com/) | [PyPI](https://pypi.org/project/ollama/)
