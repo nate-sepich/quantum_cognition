@@ -57,9 +57,9 @@ like humans. It's a rapidly growing field responsible for advanced technology su
 **Assistant**: Society uses computing in various ways daily, such as using computers or smartphones for tasks like browsing the web, sending emails, using apps, or even controlling home appliances. Some less obvious examples include using quantum computing for data encryption and analysis in financial transactions, or in scientific research.
 ```
 
-![Graph Output](docs\demo1\graph.png)
+![Graph Output](docs/demo1/graph.png)
 
-[Detailed Graph Analysis](reports\graph_metrics_report_2024-11-10_21-31-50.txt)
+[Detailed Graph Analysis](reports/graph_metrics_report_2024-11-10_21-31-50.txt)
 
 ### Demo 2: Automated Cognitive Assistant Test
 
