@@ -1,0 +1,28 @@
+
+=== Graph Health Score ===
+Node Duplication Score: 92.86
+Isolated Node Score: 57.14
+Relationship Density Score: 50.00
+Relationship Coverage Score: 33.33
+Redundant Relationship Score: 100.00
+Node Creation Time Difference Score: 100.00
+Overall Graph Score: 75.48/100
+
+=== Neo4j Graph Metrics Report ===
+Generated on: 2024-11-10 21:51:53.995467
+
+--- Node Metrics ---
+Node Duplication Rate: 1 duplicate nodes
+Isolated Nodes: 6 nodes with no relationships
+Node Creation Time Difference (Relative): 0.0 days average time difference
+
+--- Relationship Metrics ---
+Average Relationship Density: 1 relationships per node
+Relationship Coverage: 5 distinct relationship types
+Redundant Relationships: 0 redundant relationships found
+
+--- Node Type Distribution ---
+('Technology',): 3 nodes
+('Inventor',): 4 nodes
+('Computing_Device',): 6 nodes
+('Technology_Computing',): 1 nodes
